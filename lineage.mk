@@ -38,5 +38,7 @@ PRODUCT_MANUFACTURER := wiko
 PRODUCT_GMS_CLIENTID_BASE := android-wiko
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=WIKO/p6901/p6901:7.1.1/NMF26F/androi04211336:user/release-keys \
     PRIVATE_BUILD_DESC="p6901-user 7.1.1 NMF26F eng.android.1515680200 release-keys"
+
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := WIKO/p6901/p6901:7.1.1/NMF26F/androi04211336:user/release-keys
