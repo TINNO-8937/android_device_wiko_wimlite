@@ -104,6 +104,7 @@
     <ctl name="DEC3 MUX" value="ZERO" />
     <ctl name="DEC4 MUX" value="ZERO" />
     <ctl name="SpkrMono VISENSE Switch" value="0" />
+    <ctl name="ADC1_INP1 Switch" value="0" />
 
     <ctl name="Ext Spk Switch" value="Off" />
     <ctl name="Ext Spk" value="Off" /><!--wangyanhui -->
@@ -1068,6 +1069,7 @@
     <!-- These are actual sound device specific mixer settings -->
     <path name="adc1"><!--yangliang mask20160420-->
         <ctl name="DEC1 MUX" value="ADC1" />
+        <ctl name="ADC1_INP1 Switch" value="1" />
     </path>
 
     <path name="adc2"><!--yangliang mask20160420-->
