@@ -15,3 +15,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_wimlite.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_wimlite-eng \
+    lineage_wimlite-user \
+    lineage_wimlite-userdebug
