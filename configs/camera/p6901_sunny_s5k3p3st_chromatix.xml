@@ -1,0 +1,183 @@
+<!--
+  Copyright (c) 2016 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<!--
+CommonChromatixInfo:
+    CommonChromatixInfo is the information about chromatix needed for
+        various use cases.
+    Ex:- Preview, Snapshot, ZSL, HFR, HDR, Video, Liveshot for ISP, CPP,
+        3A and SW PostProc.
+    Entries in this node are common for all sensor modes.
+
+ResolutionChromatixInfo:
+    ResolutionChromatixInfo is the information about chromatix needed for
+        various use cases.
+    Ex:- Preview, Snapshot, ZSL, HFR, HDR, Video, Liveshot for ISP, CPP,
+        3A and SW PostProc.
+    Entries in this node are specific to sensor resolution.
+
+ChromatixName:
+    Contains the list of chromatix names for all modules.
+    special_mode_mask:
+        It is the bit mask for special modes, which is used for
+            chromatix selection.
+        Special modes can be any mode that needs a special chromatix.
+        Ex:- scene mode, DZOOM mode, OIS capture mode, flash mode
+        This is applicable for CommonChromatixInfo and
+            ResolutionChromatixInfo.
+        special_mode_mask="0" means none of the special modes are
+            selected.
+    sensor_resolution_index:
+        It is the sensor resolution index for which chromatix libraries
+            will be choosen.
+        It is applicable only in ResolutionChromatixInfo.
+
+ISPCommon :
+    Common tuning library name for ISP
+ISPPreview :
+    Preview tuning library name for ISP
+ISPSnapshot :
+    Snapshot tuning library name for ISP
+CPPCommon :
+    Common tuning library name for CPP
+CPPPreview :
+    Preview tuning library name for CPP
+CPPSnapshot :
+    Snapshot tuning library name for CPP
+CPPLiveshot :
+    Liveshot tuning library name for CPP
+PostProc :
+    Tuning library name for postproc module
+A3Preview :
+    Preview tuning library for 3A
+A3Video :
+    Video tuning library for 3A
+
+Order of Resolution Pick:
+    Assume the current sensor mode is "r" and special mode mask is "s".
+    Chromatix for a module and type is choosen in this order till we find a
+        valid chroamtix file name or else NULL is returned.
+    1) From ResolutionChromatixInfo node for which sensor_resolution_index
+        is "r" and special_mode_mask is "s".
+    2) From CommonChromatixInfo node for which special_mode_mask is "s".
+    3) From ResolutionChromatixInfo node for which sensor_resolution_index
+        is "r" and special_mode_mask is "0".
+    4) From CommonChromatixInfo node for which special_mode_mask is "0".
+    5) NULL is returned if we dont find in any of the above cases.
+
+special_mode_mask values:
+    SENSOR_SPECIAL_MODE_NONE = 0,
+    SENSOR_SPECIAL_MODE_FLASH = 1,
+    SENSOR_SPECIAL_MODE_ZOOM_UPSCALE = 2,
+    SENSOR_SPECIAL_MODE_ZOOM_DOWNSCALE = 4,
+    SENSOR_SPECIAL_MODE_OIS_CAPTURE = 8,
+-->
+
+<ChromatixConfigurationRoot>
+  <CommonChromatixInfo>
+    <ChromatixName>
+      <ISPCommon>p6901_sunny_s5k3p3st_common</ISPCommon>
+      <PostProc>p6901_sunny_s5k3p3st_postproc</PostProc>
+      <CPPPreview>p6901_sunny_s5k3p3st_cpp_preview</CPPPreview>
+      <CPPSnapshot>p6901_sunny_s5k3p3st_cpp_snapshot</CPPSnapshot>
+      <CPPLiveshot>p6901_sunny_s5k3p3st_cpp_liveshot</CPPLiveshot>
+    </ChromatixName>
+    <ChromatixName special_mode_mask="ZOOM_UPSCALE">
+      <CPPSnapshot>p6901_sunny_s5k3p3st_cpp_snapshot</CPPSnapshot>
+    </ChromatixName>
+    <ChromatixName special_mode_mask="ZOOM_DOWNSCALE">
+      <CPPSnapshot>p6901_sunny_s5k3p3st_cpp_snapshot</CPPSnapshot>
+    </ChromatixName>
+  </CommonChromatixInfo>
+  <ResolutionChromatixInfo>
+    <ChromatixName sensor_resolution_index="0">
+      <ISPPreview>p6901_sunny_s5k3p3st_snapshot</ISPPreview>
+      <ISPSnapshot>p6901_sunny_s5k3p3st_snapshot</ISPSnapshot>
+      <ISPVideo>p6901_sunny_s5k3p3st_default_video</ISPVideo>
+      <CPPVideo>p6901_sunny_s5k3p3st_cpp_video</CPPVideo>
+      <A3Preview>p6901_sunny_s5k3p3st_zsl_preview</A3Preview>
+      <A3Video>p6901_sunny_s5k3p3st_zsl_video</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1">
+      <ISPPreview>p6901_sunny_s5k3p3st_preview</ISPPreview>
+      <ISPSnapshot>p6901_sunny_s5k3p3st_preview</ISPSnapshot>
+      <ISPVideo>p6901_sunny_s5k3p3st_default_video</ISPVideo>
+      <CPPVideo>p6901_sunny_s5k3p3st_cpp_video</CPPVideo>
+      <A3Preview>p6901_sunny_s5k3p3st_a3_default_preview</A3Preview>
+      <A3Video>p6901_sunny_s5k3p3st_a3_default_video</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="2">
+      <ISPPreview>p6901_sunny_s5k3p3st_hfr_60</ISPPreview>
+      <ISPSnapshot>p6901_sunny_s5k3p3st_hfr_60</ISPSnapshot>
+      <ISPVideo>p6901_sunny_s5k3p3st_hfr_60</ISPVideo>
+      <CPPVideo>p6901_sunny_s5k3p3st_cpp_hfr_60</CPPVideo>
+      <A3Preview>p6901_sunny_s5k3p3st_a3_hfr_60</A3Preview>
+      <A3Video>p6901_sunny_s5k3p3st_a3_hfr_60</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="3">
+      <ISPPreview>p6901_sunny_s5k3p3st_hfr_90</ISPPreview>
+      <ISPSnapshot>p6901_sunny_s5k3p3st_hfr_90</ISPSnapshot>
+      <ISPVideo>p6901_sunny_s5k3p3st_hfr_90</ISPVideo>
+      <CPPVideo>p6901_sunny_s5k3p3st_cpp_hfr_90</CPPVideo>
+      <A3Preview>p6901_sunny_s5k3p3st_a3_hfr_90</A3Preview>
+      <A3Video>p6901_sunny_s5k3p3st_a3_hfr_90</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="4">
+      <ISPPreview>p6901_sunny_s5k3p3st_hfr_120</ISPPreview>
+      <ISPSnapshot>p6901_sunny_s5k3p3st_hfr_120</ISPSnapshot>
+      <ISPVideo>p6901_sunny_s5k3p3st_hfr_120</ISPVideo>
+      <CPPVideo>p6901_sunny_s5k3p3st_cpp_hfr_120</CPPVideo>
+      <A3Preview>p6901_sunny_s5k3p3st_a3_hfr_120</A3Preview>
+      <A3Video>p6901_sunny_s5k3p3st_a3_hfr_120</A3Video>
+    </ChromatixName>
+
+   <ChromatixName sensor_resolution_index="0" special_mode_mask="THIRD_PARTY_APP">
+      <ISPPreview>p6901_sunny_s5k3p3st_snapshot_third_party_app</ISPPreview>
+      <ISPSnapshot>p6901_sunny_s5k3p3st_snapshot_third_party_app</ISPSnapshot>
+      <ISPVideo>p6901_sunny_s5k3p3st_default_video_third_party_app</ISPVideo>
+      <CPPPreview>p6901_sunny_s5k3p3st_cpp_preview_third_party_app</CPPPreview>
+      <CPPSnapshot>p6901_sunny_s5k3p3st_cpp_snapshot_third_party_app</CPPSnapshot>
+      <CPPLiveshot>p6901_sunny_s5k3p3st_cpp_liveshot_third_party_app</CPPLiveshot>
+      <CPPVideo>p6901_sunny_s5k3p3st_cpp_video_third_party_app</CPPVideo>
+      <A3Preview>p6901_sunny_s5k3p3st_zsl_preview_third_party_app</A3Preview>
+      <A3Video>p6901_sunny_s5k3p3st_zsl_video_third_party_app</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="THIRD_PARTY_APP">
+      <ISPPreview>p6901_sunny_s5k3p3st_preview_third_party_app</ISPPreview>
+      <ISPSnapshot>p6901_sunny_s5k3p3st_preview_third_party_app</ISPSnapshot>
+      <ISPVideo>p6901_sunny_s5k3p3st_default_video_third_party_app</ISPVideo>
+      <CPPPreview>p6901_sunny_s5k3p3st_cpp_preview_third_party_app</CPPPreview>
+      <CPPSnapshot>p6901_sunny_s5k3p3st_cpp_snapshot_third_party_app</CPPSnapshot>
+      <CPPLiveshot>p6901_sunny_s5k3p3st_cpp_liveshot_third_party_app</CPPLiveshot>
+      <CPPVideo>p6901_sunny_s5k3p3st_cpp_video_third_party_app</CPPVideo>
+      <A3Preview>p6901_sunny_s5k3p3st_a3_default_preview_third_party_app</A3Preview>
+      <A3Video>p6901_sunny_s5k3p3st_a3_default_video_third_party_app</A3Video>
+    </ChromatixName>	
+   <ChromatixName sensor_resolution_index="0" special_mode_mask="SCENE_SPORTS">
+      <ISPPreview>p6901_sunny_s5k3p3st_snapshot_sports</ISPPreview>
+      <ISPSnapshot>p6901_sunny_s5k3p3st_snapshot_sports</ISPSnapshot>
+      <ISPVideo>p6901_sunny_s5k3p3st_default_video_sports</ISPVideo>
+      <CPPPreview>p6901_sunny_s5k3p3st_cpp_preview_sports</CPPPreview>
+      <CPPSnapshot>p6901_sunny_s5k3p3st_cpp_snapshot_sports</CPPSnapshot>
+      <CPPLiveshot>p6901_sunny_s5k3p3st_cpp_liveshot_sports</CPPLiveshot>
+      <CPPVideo>p6901_sunny_s5k3p3st_cpp_video_sports</CPPVideo>
+      <A3Preview>p6901_sunny_s5k3p3st_zsl_preview_sports</A3Preview>
+      <A3Video>p6901_sunny_s5k3p3st_zsl_video_sports</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1" special_mode_mask="SCENE_SPORTS">
+      <ISPPreview>p6901_sunny_s5k3p3st_preview_sports</ISPPreview>
+      <ISPSnapshot>p6901_sunny_s5k3p3st_preview_sports</ISPSnapshot>
+      <ISPVideo>p6901_sunny_s5k3p3st_default_video_sports</ISPVideo>
+      <CPPPreview>p6901_sunny_s5k3p3st_cpp_preview_sports</CPPPreview>
+      <CPPSnapshot>p6901_sunny_s5k3p3st_cpp_snapshot_sports</CPPSnapshot>
+      <CPPLiveshot>p6901_sunny_s5k3p3st_cpp_liveshot_sports</CPPLiveshot>
+      <CPPVideo>p6901_sunny_s5k3p3st_cpp_video_sports</CPPVideo>
+      <A3Preview>p6901_sunny_s5k3p3st_a3_default_preview_sports</A3Preview>
+      <A3Video>p6901_sunny_s5k3p3st_a3_default_video_sports</A3Video>
+    </ChromatixName>	
+	</ResolutionChromatixInfo>
+</ChromatixConfigurationRoot>
+
