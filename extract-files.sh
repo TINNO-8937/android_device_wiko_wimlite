@@ -19,7 +19,7 @@ set -e
 
 # Required!
 export DEVICE=wimlite
-export VENDOR=wiko
+export VENDOR_DEVICE=wiko
 export DEVICE_COMMON=msm8937-common
 export VENDOR_COMMON=tinno
 
