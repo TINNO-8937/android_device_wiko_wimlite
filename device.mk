@@ -20,6 +20,10 @@ $(call inherit-product, vendor/wiko/wimlite/wimlite-vendor.mk)
 # Inherit from msm8996-common
 $(call inherit-product, device/tinno/msm8937-common/msm8937.mk)
 
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml
+
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/camera_config.xml:system/etc/camera/camera_config.xml \
