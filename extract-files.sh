@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # Copyright (C) 2018 The LineageOS Project
 #
@@ -14,15 +15,14 @@
 # limitations under the License.
 #
 
--include device/tinno/msm8937-common/BoardConfigCommon.mk
+set -e
 
-DEVICE_PATH := device/wiko/wimlite
+# Required!
+export DEVICE=wimlite
+export VENDOR=wiko
+export DEVICE_COMMON=msm8937-common
+export VENDOR_COMMON=tinno
 
-# Kernel
-TARGET_KERNEL_CONFIG := wimlite-perf_defconfig
+export DEVICE_BRINGUP_YEAR=2018
 
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
-
-# Inherit from the proprietary version
--include vendor/wiko/wimlite/BoardConfigVendor.mk
+./../../$VENDOR_COMMON/$DEVICE_COMMON/extract-files.sh $@
