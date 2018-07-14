@@ -17,6 +17,10 @@
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/wiko/wimlite/wimlite-vendor.mk)
 
+# Local overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 # Inherit from msm8996-common
 $(call inherit-product, device/tinno/msm8937-common/msm8937.mk)
 
