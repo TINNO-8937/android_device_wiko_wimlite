@@ -21,7 +21,7 @@ $(call inherit-product, vendor/wiko/wimlite/wimlite-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
-# Inherit from msm8996-common
+# Inherit from msm8937-common
 $(call inherit-product, device/tinno/msm8937-common/msm8937.mk)
 
 # Audio
