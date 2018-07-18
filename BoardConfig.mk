@@ -27,6 +27,9 @@ TARGET_KERNEL_CONFIG := wimlite-perf_defconfig
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
+# NFC
+NXP_CHIP_TYPE := 2
+
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
