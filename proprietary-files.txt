@@ -195,12 +195,12 @@ vendor/lib/libmmcamera_p6901_sunny_s5k3p3st_eeprom.so
 
 # Fingerprint
 bin/fpsvcd_ca_qsee
-lib64/hw/fingerprint.chipone.default.so:lib64/hw/fingerprint.chipone.so
-lib64/hw/fingerprint.elan.default.so:lib64/hw/fingerprint.elan.so
-lib64/hw/fingerprint.silead.default.so:lib64/hw/fingerprint.silead.so
+lib64/hw/fingerprint.chipone.default.so
+lib64/hw/fingerprint.elan.default.so
+lib64/hw/fingerprint.silead.default.so
 lib64/libfpfslockd_remoteapi.a
 lib64/libfpsvcd_remoteapi.a
-lib/hw/fingerprint.silead.default.so:lib/hw/fingerprint.silead.so
+lib/hw/fingerprint.silead.default.so
 lib/libfpfslockd_remoteapi.a
 lib/libfpsvcd_remoteapi.a
 
