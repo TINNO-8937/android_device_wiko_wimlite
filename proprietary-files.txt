@@ -204,5 +204,8 @@ lib/hw/fingerprint.silead.default.so
 lib/libfpfslockd_remoteapi.a
 lib/libfpsvcd_remoteapi.a
 
+# TFA
+etc/firmware/tfa9896_v3.cnt
+
 # Thermal
 etc/thermal-engine.conf
