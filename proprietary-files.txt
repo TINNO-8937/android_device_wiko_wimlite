@@ -208,6 +208,10 @@ lib/hw/fingerprint.silead.default.so
 lib/libfpfslockd_remoteapi.a
 lib/libfpsvcd_remoteapi.a
 
+# Sensors
+lib/hw/sensors.msm8937.so
+lib64/hw/sensors.msm8937.so
+
 # TFA
 etc/firmware/tfa9896_v3.cnt
 
