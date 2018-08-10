@@ -162,7 +162,11 @@
         <device name="SND_DEVICE_IN_UNPROCESSED_THREE_MIC" acdb_id="145"/>
         <device name="SND_DEVICE_IN_UNPROCESSED_QUAD_MIC" acdb_id="146"/>
         <device name="SND_DEVICE_IN_UNPROCESSED_HEADSET_MIC" acdb_id="147"/>
-
     </acdb_ids>
+    <device_names>
+        <device name="SND_DEVICE_IN_SKYPE_HEADSET_MIC" alias="handset-mic" />
+        <device name="SND_DEVICE_IN_SKYPE_DMIC" alias="voice-dmic-ef" />
+        <device name="SND_DEVICE_IN_VOICE_HANDSET_REC" alias="voice-rec-mic" />
+    </device_names>
 </audio_platform_info>
 
