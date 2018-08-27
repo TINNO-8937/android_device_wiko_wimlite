@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera/msm8937_camera_p6901.xml:system/etc/camera/msm8937_camera_p7201.xml \
+    $(LOCAL_PATH)/configs/camera/msm8937_camera_p6901.xml:system/etc/camera/msm8937_camera_c800.xml \
     $(LOCAL_PATH)/configs/camera/p6901_sunny_s5k3p3st_chromatix.xml:system/etc/camera/p6901_sunny_s5k3p3st_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/imx258_sunny_p6901_chromatix.xml:system/etc/camera/imx258_sunny_p6901_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/s5k3l8_sunny_p6901_chromatix.xml:system/etc/camera/s5k3l8_sunny_p6901_chromatix.xml \
