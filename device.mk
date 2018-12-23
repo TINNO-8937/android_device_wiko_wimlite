@@ -31,11 +31,11 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera/msm8937_camera_p6901.xml:system/etc/camera/msm8937_camera_c800.xml \
-    $(LOCAL_PATH)/configs/camera/p6901_sunny_s5k3p3st_chromatix.xml:system/etc/camera/p6901_sunny_s5k3p3st_chromatix.xml \
-    $(LOCAL_PATH)/configs/camera/imx258_sunny_p6901_chromatix.xml:system/etc/camera/imx258_sunny_p6901_chromatix.xml \
-    $(LOCAL_PATH)/configs/camera/s5k3l8_sunny_p6901_chromatix.xml:system/etc/camera/s5k3l8_sunny_p6901_chromatix.xml \
-    $(LOCAL_PATH)/configs/camera/imx258_sunny_front_p6901_chromatix.xml:system/etc/camera/imx258_sunny_front_p6901_chromatix.xml
+    $(LOCAL_PATH)/configs/camera/msm8937_camera_p6901.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/msm8937_camera_c800.xml \
+    $(LOCAL_PATH)/configs/camera/p6901_sunny_s5k3p3st_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/p6901_sunny_s5k3p3st_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/imx258_sunny_p6901_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_sunny_p6901_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/s5k3l8_sunny_p6901_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3l8_sunny_p6901_chromatix.xml \
+    $(LOCAL_PATH)/configs/camera/imx258_sunny_front_p6901_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx258_sunny_front_p6901_chromatix.xml
 
 # FSTAB
 PRODUCT_PACKAGES += \
@@ -43,21 +43,21 @@ PRODUCT_PACKAGES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
-    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/keylayout/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl
+    $(LOCAL_PATH)/keylayout/ft5x06_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/ft5x06_ts.kl \
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayout/qpnp_pon.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/qpnp_pon.kl
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:system/etc/media_profiles_V1_0.xml
+    $(LOCAL_PATH)/configs/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 # NFC
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:system/etc/permissions/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -66,11 +66,11 @@ PRODUCT_PACKAGES += \
     Tag
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/nfc/libnfc-mtp_rf1.conf:system/etc/libnfc-mtp_rf1.conf \
-    $(LOCAL_PATH)/nfc/libnfc-mtp_rf2.conf:system/etc/libnfc-mtp_rf2.conf
+    $(LOCAL_PATH)/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/nfc/libnfc-mtp_rf1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-mtp_rf1.conf \
+    $(LOCAL_PATH)/nfc/libnfc-mtp_rf2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-mtp_rf2.conf
 
 # Sensors
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
-    $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
+    $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
