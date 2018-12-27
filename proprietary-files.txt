@@ -1,11 +1,11 @@
 # Audio ACDB - from stock
-etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|bbd2bd6a145b7bc24fa6e6c91560ef69b4aa655c
-etc/acdbdata/MTP/MTP_General_cal.acdb|d91fdd353f3c3dbabf5fe403f5d0d201cc5e8202
-etc/acdbdata/MTP/MTP_Global_cal.acdb|1fd15031c45de5904ac493b94e97713b7acf3b70
-etc/acdbdata/MTP/MTP_Handset_cal.acdb|ac4b09e752e0c2ef99eaaa023401a3d4f2930883
-etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|b949a7c67f84528df933951a1c78caf518d6aa29
-etc/acdbdata/MTP/MTP_Headset_cal.acdb|163143fca558d81f5af15c64b1bee23b79c59466
-etc/acdbdata/MTP/MTP_Speaker_cal.acdb|ebfa60b0f63268cacba9a0b162d2a43b7c871642
+vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|bbd2bd6a145b7bc24fa6e6c91560ef69b4aa655c
+vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|d91fdd353f3c3dbabf5fe403f5d0d201cc5e8202
+vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|1fd15031c45de5904ac493b94e97713b7acf3b70
+vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb|ac4b09e752e0c2ef99eaaa023401a3d4f2930883
+vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|b949a7c67f84528df933951a1c78caf518d6aa29
+vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|163143fca558d81f5af15c64b1bee23b79c59466
+vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|ebfa60b0f63268cacba9a0b162d2a43b7c871642
 
 # Camera - from stock
 vendor/lib/libmmcamera_imx258_sunny_front_p6901.so|cdfae0d0f9adebf7b69a6f723590080d22ea1fe8
@@ -194,18 +194,18 @@ vendor/lib/libmmcamera_p6901_sunny_s5k3l8_eeprom.so|9cfaa4e6c1737e132c079fba01a8
 vendor/lib/libmmcamera_p6901_sunny_s5k3p3st_eeprom.so|c0d5e324126d65ef262e6c2868da45eb20aede3a
 
 # Fingerprint - from stock
-bin/fpsvcd_ca_qsee|fff250f5044ce4a46c5f71205ca22a7fbc3d4470
-lib64/hw/fingerprint.chipone.default.so|0a9f083b8affdcf7a99fc515d7a10686f354b721
-lib64/hw/fingerprint.elan.default.so|d6cb9dd9f314f1b2ce754debbc7d492d04baa68d
-lib64/hw/fingerprint.silead.default.so|4827fb16a1470e9ebd5532ee6cc2647726a0750e
-lib64/libfpfslockd_remoteapi.a|fd93a9df183aee8f4386e4a91f0ef70a233e9118
-lib64/libfpsvcd_remoteapi.a|d058f2c54d92ec225fe4dec419272a6b8f181044
-lib/hw/fingerprint.silead.default.so|4ae3fe271f88910c9ef7566b6cb5e0b22f1393f1
-lib/libfpfslockd_remoteapi.a|3ca15438aa21826f7f14f75a3b79825d87ac40a8
-lib/libfpsvcd_remoteapi.a|ff60407c105b6e29b1d10e397eab93526e777d5d
+vendor/bin/fpsvcd_ca_qsee|fff250f5044ce4a46c5f71205ca22a7fbc3d4470
+vendor/lib64/hw/fingerprint.chipone.default.so|0a9f083b8affdcf7a99fc515d7a10686f354b721
+vendor/lib64/hw/fingerprint.elan.default.so|d6cb9dd9f314f1b2ce754debbc7d492d04baa68d
+vendor/lib64/hw/fingerprint.silead.default.so|4827fb16a1470e9ebd5532ee6cc2647726a0750e
+vendor/lib64/libfpfslockd_remoteapi.a|fd93a9df183aee8f4386e4a91f0ef70a233e9118
+vendor/lib64/libfpsvcd_remoteapi.a|d058f2c54d92ec225fe4dec419272a6b8f181044
+vendor/lib/hw/fingerprint.silead.default.so|4ae3fe271f88910c9ef7566b6cb5e0b22f1393f1
+vendor/lib/libfpfslockd_remoteapi.a|3ca15438aa21826f7f14f75a3b79825d87ac40a8
+vendor/lib/libfpsvcd_remoteapi.a|ff60407c105b6e29b1d10e397eab93526e777d5d
 
 # TFA - from stock
-etc/firmware/tfa9896_v3.cnt|2f1d377c3e3571145bab1f87e050a6f5a11010fd
+vendor/etc/firmware/tfa9896_v3.cnt|2f1d377c3e3571145bab1f87e050a6f5a11010fd
 
 # Thermal - from stock
-etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
+vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
