@@ -27,6 +27,9 @@ TARGET_KERNEL_CONFIG := wimlite_defconfig
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # NFC
 NXP_CHIP_TYPE := 2
 
