@@ -25,4 +25,4 @@ export VENDOR_COMMON=tinno
 
 export DEVICE_BRINGUP_YEAR=2018
 
-./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
+./../../$VENDOR_COMMON/$DEVICE_COMMON/setup-makefiles.sh $@
