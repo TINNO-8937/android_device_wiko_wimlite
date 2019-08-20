@@ -22,7 +22,7 @@ DEVICE_PATH := device/wiko/wimlite
 TARGET_OTA_ASSERT_DEVICE := wimlite
 
 # Kernel
-TARGET_KERNEL_CONFIG := wimlite_defconfig
+TARGET_KERNEL_CONFIG := wimlite-perf_defconfig
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
