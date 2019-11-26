@@ -61,10 +61,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.0-impl \
-    android.hardware.nfc@1.0-service \
+    android.hardware.nfc@1.1-service \
     com.android.nfc_extras \
-    nfc_nci.msm8937 \
+    SecureElement \
     NfcNci \
     Tag
 
