@@ -39,13 +39,6 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4689231872
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 25093971456
-BOARD_ROOT_EXTRA_SYMLINKS += /mnt/vendor/persist:/persist
-BOARD_ROOT_EXTRA_FOLDERS := firmware dsp
-
-# Recovery
-ifneq ($(WITH_TWRP),true)
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
-endif
 
 # Inherit from the proprietary version
 -include vendor/wiko/wimlite/BoardConfigVendor.mk
